@@ -105,11 +105,11 @@ class PricingUtils:
         Dt_list = np.arange(scenario_config['Dt'][0], scenario_config['Dt'][1], scenario_config['Dt'][2])
 
         scenarios = []
-        for S0 in S0_list:
+        for r in r_list:
             for K in K_list:
-                for vol in vol_list:
-                    for r in r_list:
-                        for Dt in Dt_list:
+                for Dt in Dt_list:
+                    for vol in vol_list:
+                        for S0 in S0_list:
                             call_put = random.choice([int(0), int(1)])
                             scenario = {
                                 "opt_type": call_put,

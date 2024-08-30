@@ -5,7 +5,7 @@ from training_utils import TrainUtils
 
 if __name__ == '__main__':
     # inputs to create training data
-    scenario_configuration_1 = {"S0": [45, 120, 5],
+    scenario_configuration_1 = {"S0": [40, 100, 5],
                               "K": [50, 155, 5],
                               "vol": [0.1, 2.1, .1],
                               "r": [.0, .1, .01],
@@ -23,3 +23,4 @@ if __name__ == '__main__':
     # storing training dataset or test dataset
     code = TrainUtils.random_code_generator(3)
     output_priced_bsm.to_csv(f'training_datasets\\bsm_dataset_{code}.xlsx', index=False)
+    print(f'CSV file was created on training_datasets with name bsm_dataset_{code}.xlsx.')
