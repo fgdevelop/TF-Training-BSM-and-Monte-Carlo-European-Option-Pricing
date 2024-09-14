@@ -8,7 +8,7 @@ Project involving the creation of a Black-Scholes-Merton (BSM) and Monte Carlo (
   between the BSM and MC dataset generators is that the BSM generator creates the full dataset all at once and store it on a csv file, meanwhile the MC generator, avoiding 
   possible Memory Errors, storage chunks of datasets on multiple CSV files and then compile all of then into one, deleting the chunk files.
 
-- training_model.py (BSM/MC): This script uses the dataset created previously on either dataset_generator_bsm or dataset_generator_mc to train a ANN. The script separates the dataset 
+- training_model.py (BSM/MC): This script uses the dataset created previously on either dataset_generator_bsm or dataset_generator_mc to train an ANN. The script separates the dataset 
   into training data (applied to the ANN) and test data (used to understand later the effectiveness of the trained machine). Both datasets are properly preprocessed using sklearn for 
   scaling and shuffle of the data. After the training, the model is stored as a .keras file.
 
