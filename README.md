@@ -1,5 +1,6 @@
 # TF Training BSM and Monte Carlo European Option Pricing
-Project involving the creation of a Black-Scholes-Merton (BSM) and Monte Carlo (MC) pricing machine using a deep learning ANN from tensorflow/keras package. This project has the goal of implementing a machine capable of pricing European options in order to have a faster performance. The scripts are organized as it follows:
+
+Project involving the creation of a Black-Scholes-Merton (BSM) and Monte Carlo (MC) pricing machine using a deep learning ANN from tensorflow/keras package. This project has the goal of implementing a machine capable of pricing European options in order to have a faster performance when compared with the straight forward pricing models application. The scripts are organized as it follows:
 
 - dataset_generator_bsm/_mc.py: Responsible for the creation of the raw datasets for BSM (on dataset_generator_bsm) and MC (on dataset_generator_mc) both follow a similar structure 
   creating a Pandas dataframe where each line  identify a set of features and a target value calculated by one of the two possible models (the model calculators are available on 
@@ -18,3 +19,9 @@ Project involving the creation of a Black-Scholes-Merton (BSM) and Monte Carlo (
 - utils: Contains most of the data treatment functions along with other tools used on the previously described scripts.
 
 - class_bsm_mc_opt_price.py: Contains most of the pricing functions and it is responsible for the creation of the scenarios/scenarios + price dataset.
+
+OBS: 
+- Currently the scripts must be on the same directory with 4 folders labeled as: mc_scenarios, mc_training_datasets, models, test_datasets, training_datasets for the storage of the CSV 
+  and keras files.
+
+- Each one of the dataset created will have a code of 3 numbers and 3 letters identifying it (ex. 2h2X9o), this must be the inputs for training_model.py and applying_model.py scripts.
